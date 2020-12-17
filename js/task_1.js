@@ -21,8 +21,16 @@ user.premium = false
 
 // выводит содержимое объекта user в формате ключ: значение используя Object.keys() и for...of
 
-const keys = Object.keys(user)
+const entries = Object.entries(user)
 
-for (const key of keys) {
-  console.log("Value: ", user[key])
+for (const entry of entries) {
+  const key = entry[0]
+  const value = entry[1]
+
+  console.log(`${key}: ${value}`)
 }
+// const keys = Object.keys(user)
+
+// for (const key of keys) {
+//   console.log("Key: ", user[key])
+// }
